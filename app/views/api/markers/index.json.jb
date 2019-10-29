@@ -1,0 +1,4 @@
+@markers.map do |marker|
+  render partial: "marker.json.jb", locals: {activity: activity}
+end
+

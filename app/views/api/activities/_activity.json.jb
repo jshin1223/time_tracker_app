@@ -1,0 +1,7 @@
+{
+ id: activity.id,
+ name: activity.name,
+ priority: activity.priority,
+ image_url: activity.image_url
+
+}

@@ -1,0 +1,4 @@
+@activities.map do |activity|
+  render partial: "activity.json.jb", locals: {activity: activity}
+end 
+
