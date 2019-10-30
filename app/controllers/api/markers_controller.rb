@@ -10,11 +10,12 @@ class Api::MarkersController < ApplicationController
                         activity_id: params[:activity_id],
                         end_time: params[:end_time],
                         created_at: params[:created_at]
+                        )
 
-    if user.save
+    if @marker.save
       render json: {message: 'Marker created successfully'}, status: :created
     else
-      render json: {errors: user.errors.full_messages}, status: :bad_request
+      render json: {errors: @marker.errors.full_messages}, status: :bad_request
     end
   end
 

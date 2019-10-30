@@ -1,5 +1,5 @@
 {
- id: marker.marker.id,
+ id: marker.id,
  activity_id: marker.activity_id,
  end_time: marker.end_time,
  created_at: marker.created_at

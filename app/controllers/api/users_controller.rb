@@ -22,7 +22,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render 'show.jshon.jb'
+    render 'show.json.jb'
   end
 
   def update
@@ -33,7 +33,7 @@ class Api::UsersController < ApplicationController
     @user.password_digest = params[:password_digest] || @user.password_digest
 
     if @user.save
-      render 'show.jshin.jb'
+      render 'show.json.jb'
     else
       render json: {errors: @user.errors.full_messages}, status: unprocessable_entity
     end

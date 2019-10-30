@@ -8,13 +8,13 @@ class Api::ActivitiesController < ApplicationController
     @activity = Activity.new(
                             name: params[:name],
                             priority: params[:priority],
-                            image_url: params[image_url]
+                            image_url: params[:image_url]
 
                             )
-    if user.save
+    if @activity.save
       render json: {message: 'Activity created successfully'}, status: :created
     else
-      render json: {errors: @user.errors.full_messages}, status: bad_request
+      render json: {errors: @activity.errors.full_messages}, status: bad_request
     end
   end 
 
