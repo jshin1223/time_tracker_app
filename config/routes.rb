@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
     get '/markers' => 'markers#index'
-    post '/markers' => 'markers#create'
+    post '/activities/:activity_id/markers' => 'markers#create'
     get '/markers/:id' => 'markers#show'
     patch '/markers/:id' => 'markers#update'
     delete '/markers/:id' => 'markers#destroy'

@@ -5,17 +5,31 @@ class Api::MarkersController < ApplicationController
   end
 
   def create
-    @marker = Marker.new(
-                        user_id: params[:user_id],
-                        activity_id: params[:activity_id],
-                        end_time: params[:end_time],
-                        created_at: params[:created_at]
-                        )
+    puts "*" * 50
+    p current_user
+    puts "*" * 50
+    # Change POST url to /activities/:activity_id/markers 
 
-    if @marker.save
-      render json: {message: 'Marker created successfully'}, status: :created
+    # Step 1: Check if activity_id has a marker for this user
+    @marker = Marker.find_by(
+                              user_id: current_user.id,
+                              activity_id: params[:activity_id],
+                              end_time: nil
+                              )
+    # Step 2: If a marker exists, check if it has nil in the end_time
+    if @marker
+    # Step 4: If end_time has nil, then insert the current time into end_time attribute
+      @marker.update(end_time: Time.now)
+      render json: {activity_id: @marker.activity_id, open: false}
     else
-      render json: {errors: @marker.errors.full_messages}, status: :bad_request
+    # Step 3: If end_time does not have nil, then create a new marker
+      @marker = Marker.new(
+                            user_id: current_user.id,
+                            activity_id: params[:activity_id],
+                            end_time: nil
+                            )
+      @marker.save
+      render json: {activity_id: @marker.activity_id, open: true}
     end
   end
 
