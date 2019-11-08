@@ -1,6 +1,6 @@
 class Api::ActivitiesController < ApplicationController
   def index
-    @activities = Activity.all 
+    @activities = Activity.all.includes(:markers) 
     render 'index.json.jb'
   end
 

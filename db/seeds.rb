@@ -26,25 +26,6 @@ Activity.create!([
 ])
 
 Marker.create!([
-  {user_id: 1, activity_id: 1, end_time: "2019-10-26 14:38:51"},
-  {user_id: 1, activity_id: 2, end_time: "2019-10-25 13:38:51"},
-  {user_id: 1, activity_id: 3, end_time: "2019-10-24 19:48:51"},
-  {user_id: 1, activity_id: 4, end_time: "2019-10-22 19:38:51"},
-  {user_id: 1, activity_id: 5, end_time: "2019-10-21 19:38:51"},
-  {user_id: 1, activity_id: 6, end_time: "2019-10-29 19:38:51"},
-  {user_id: 2, activity_id: 7, end_time: "2019-10-25 19:38:51"},
-  {user_id: 2, activity_id: 3, end_time: "2019-10-23 19:38:51"},
-  {user_id: 2, activity_id: 2, end_time: "2019-10-27 19:38:51"},
-  {user_id: 2, activity_id: 4, end_time: "2019-10-22 19:38:51"},
-  {user_id: 1, activity_id: 1, end_time: "2019-10-21 14:38:51"},
-  {user_id: 1, activity_id: 5, end_time: "2019-10-20 13:38:51"},
-  {user_id: 1, activity_id: 1, end_time: "2019-10-26 19:48:61"},
-  {user_id: 1, activity_id: 7, end_time: "2019-10-24 19:38:51"},
-  {user_id: 1, activity_id: 1, end_time: "2019-10-23 19:38:51"},
-  {user_id: 1, activity_id: 8, end_time: "2019-10-22 19:38:51"},
-  {user_id: 2, activity_id: 1, end_time: "2019-10-21 19:38:51"},
-  {user_id: 2, activity_id: 3, end_time: "2019-10-27 19:38:51"},
-  {user_id: 2, activity_id: 1, end_time: "2019-10-29 19:38:51"},
-  {user_id: 2, activity_id: 2, end_time: "2019-10-22 19:38:51"},
-  {user_id: 2, activity_id: 1, end_time: "2019-10-29 19:38:51"}
+  {user_id: 1, activity_id: 1, end_time: "2019-11-07 17:38:51"},
+  {user_id: 2, activity_id: 2, end_time: "2019-11-07 17:38:51"}
 ])

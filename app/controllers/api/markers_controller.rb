@@ -20,7 +20,7 @@ class Api::MarkersController < ApplicationController
     if @marker
     # Step 4: If end_time has nil, then insert the current time into end_time attribute
       @marker.update(end_time: Time.now)
-      render json: {activity_id: @marker.activity_id, open: false}
+      render json: {activity_id: @marker.activity_id, open: false, marker: {}}
     else
     # Step 3: If end_time does not have nil, then create a new marker
       @marker = Marker.new(
@@ -29,7 +29,7 @@ class Api::MarkersController < ApplicationController
                             end_time: nil
                             )
       @marker.save
-      render json: {activity_id: @marker.activity_id, open: true}
+      render json: {activity_id: @marker.activity_id, open: true, marker: @marker}
     end
   end
 

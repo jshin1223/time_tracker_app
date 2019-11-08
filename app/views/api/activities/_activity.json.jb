@@ -2,6 +2,8 @@
  id: activity.id,
  name: activity.name,
  priority: activity.priority,
- image_url: activity.image_url
+ image_url: activity.image_url,
+ marker: activity.markers.find_by(user_id: current_user.id, end_time: nil) || {},
+
 
 }
