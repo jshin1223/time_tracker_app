@@ -9,13 +9,18 @@ class User < ApplicationRecord
   def activity_totals
     Activity.all.map { |activity| 
       {
-        name: activity.name,
         id: activity.id,
+        name: activity.name,
+        image_url: activity.image_url,
         total_seconds: activity.in_seconds(id),
         time_data: activity.total_time(id),
         formatted_time: activity.formatted_time(id)
       }
     }
+
   end
+
+
+  
 
 end

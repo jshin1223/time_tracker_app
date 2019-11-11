@@ -1,6 +1,6 @@
 User.create!([
-  {name:"tommy", email:"tommy@gmail.com", password:"password", password_confirmation:"password"},
-  {name:"mike", email:"mike@gmail.com", password:"password", password_confirmation:"password"},
+  {name:"Tommy", email:"tommy@gmail.com", password:"password", password_confirmation:"password"},
+  {name:"Mike", email:"mike@gmail.com", password:"password", password_confirmation:"password"},
 ])
 
 Activity.create!([
@@ -25,7 +25,7 @@ Activity.create!([
   
 ])
 
-Marker.create!([
-  {user_id: 1, activity_id: 1, end_time: "2019-11-07 17:38:51"},
-  {user_id: 2, activity_id: 2, end_time: "2019-11-07 17:38:51"}
-])
+# Marker.create!([
+#   {user_id: 1, activity_id: 4, end_time: "2019-11-11 12:38:51"},
+#   {user_id: 2, activity_id: 4, end_time: "2019-11-11 12:38:51"}
+# ])
